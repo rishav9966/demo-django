@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body_block %}
+{% load static %}
+<!-- static is keyword for laoding static files 
+The STATIC_URL value is automatically added to the source of the image file,
+ even though it is coming from a different directory -->
+    <img src="{% static 'image/image1.jpg' %}" alt="profile" height="270" width="235">
+    <h1>This is about developer of this app</h1>
+    <h1>MyApp Team</h1>
+    <h2>Year : {{ time | date:'Y' }}</h2>
+    <h2>Year : {{ time | date:'M' }}</h2>
+{% endblock %}
